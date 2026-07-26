@@ -5,7 +5,6 @@ URL = input("Input a URL: ")
 
 print("1. Short url")
 print("2. Long url")
-print("3. clean the Url")
 
 option = int(input("Choose a url choose: "))
 
@@ -15,5 +14,8 @@ if option[1]:
     print("\n")
     print(short_URL)
 
-elif option[2]:
-    expanded_url = sl.tinyurl.expand(URL)
+else:
+    expand = pyshorteners.shorteners
+    expand_url = URL
+    expanded_url = expand.tinyurl.expand(URL)
+    print(expanded_url)
