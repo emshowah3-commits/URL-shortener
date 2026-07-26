@@ -8,14 +8,14 @@ print("2. Long url")
 
 option = int(input("Choose a url choose: "))
 
-if option[1]:
+if option == 1:
     shortener = pyshorteners.Shortener()
     short_URL = shortener.tinyurl.short(URL)
     print("\n")
     print(short_URL)
 
-else:
-    expand = pyshorteners.shorteners
+elif option == 2:
+    expand = pyshorteners.Shortener()
     expand_url = URL
     expanded_url = expand.tinyurl.expand(URL)
     print(expanded_url)
